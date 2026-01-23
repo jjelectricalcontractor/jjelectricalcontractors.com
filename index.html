@@ -1,159 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="J&J Electrical Contractors, LLC - Commercial and Residential Electrical Services in South Florida" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="J&J Electrical Contractors, LLC - Commercial and Residential Electrical Services in South Florida">
   <title>J&J Electrical Contractors, LLC</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root { --primary:#0b3c5d; --light:#f4f6f8; --text:#222; }
-    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--text); line-height:1.6; }
-    header { background:var(--primary); color:#fff; padding:46px 18px; text-align:center; }
-    header h1 { margin:0 0 8px; font-size:34px; }
-    header p { margin:0; font-size:18px; opacity:.95; }
-    .wrap { max-width:1100px; margin:auto; padding:40px 18px; }
-    .grid { display:grid; gap:18px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-    .card { background:#fff; border:1px solid #e6e8eb; border-radius:12px; padding:18px; }
-    .muted { color:#555; }
-    .band { background:var(--light); }
-    h2 { color:var(--primary); margin:0 0 10px; }
-    h3 { margin:14px 0 8px; color:#111; }
-    ul { margin:10px 0 0; padding-left:18px; }
-    .cta { display:inline-block; margin-top:12px; background:#fff; color:var(--primary); padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:bold; }
-    .pill { display:inline-block; padding:6px 10px; border-radius:999px; background:rgba(255,255,255,.15); margin-top:10px; font-size:14px; }
-    footer { background:var(--primary); color:#fff; text-align:center; padding:18px; font-size:14px; }
-    .contact { background:#fff; border-left:5px solid var(--primary); border-radius:10px; padding:16px; }
-    .note { font-size:14px; color:#444; }
-    .field { display:flex; flex-direction:column; gap:6px; margin-bottom:12px; }
-    input, textarea { padding:10px; border:1px solid #cfd6dd; border-radius:10px; font-size:16px; }
-    button { background:var(--primary); color:#fff; border:none; padding:12px 14px; border-radius:10px; font-size:16px; cursor:pointer; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 46px 18px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 34px;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 18px;
+      opacity: .95;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.15);
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 14px;
+      background: #fff;
+      color: var(--primary);
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 18px;
+    }
+
+    .band {
+      background: var(--light);
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #e6e8eb;
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin: 0 0 10px;
+    }
+
+    .muted {
+      color: #555;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #444;
+    }
+
+    /* Services list styling */
+    .card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .card ul li {
+      padding: 6px 0;
+      border-bottom: 1px solid #eef1f4;
+      font-size: 15px;
+    }
+
+    .card ul li:last-child {
+      border-bottom: none;
+    }
+
+    /* Form */
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #cfd6dd;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .contact {
+      background: #fff;
+      border-left: 5px solid var(--primary);
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 18px;
+      font-size: 14px;
+    }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>J&J Electrical Contractors, LLC</h1>
-    <p>Commercial & Residential Electrical Services</p>
-    <div class="pill">License: EC13009787 • Serving South Florida & Broward</div>
-    <div>
-      <a class="cta" href="#contact">Request an Estimate</a>
+
+<header>
+  <h1>J&J Electrical Contractors, LLC</h1>
+  <p>Commercial & Residential Electrical Services</p>
+  <div class="pill">License: EC13009787 • Serving South Florida & Broward</div>
+  <div>
+    <a class="cta" href="#contact">Request an Estimate</a>
+  </div>
+</header>
+
+<section class="wrap">
+  <h2>Reliable | Code-Compliant | Professional.</h2>
+  <p class="muted">
+    We provide dependable electrical solutions for commercial and residential clients throughout South Florida.
+    From service upgrades and lighting retrofits to generators and EV chargers, our team delivers safe, clean,
+    and efficient work with clear communication.
+  </p>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <h2>Featured Projects</h2>
+    <p class="muted">A selection of completed commercial and residential electrical projects.</p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="images/Disconnect.jpg" alt="Electrical disconnect installation" style="width:100%; border-radius:10px;">
+        <p class="note">Disconnect Installation</p>
+      </div>
+
+      <div class="card">
+        <img src="images/EV-Charger-Commercial.jpg" alt="Commercial EV charger installation" style="width:100%; border-radius:10px;">
+        <p class="note">Commercial EV Charger</p>
+      </div>
+
+      <div class="card">
+        <img src="images/New-Construction.jpg" alt="New construction electrical work" style="width:100%; border-radius:10px;">
+        <p class="note">New Construction</p>
+      </div>
+
+      <div class="card">
+        <img src="images/New-Construction-Night.jpg" alt="New construction at night" style="width:100%; border-radius:10px;">
+        <p class="note">Exterior Lighting</p>
+      </div>
+
+      <div class="card">
+        <img src="images/Retrofit-Repair.jpg" alt="Electrical retrofit repair" style="width:100%; border-radius:10px;">
+        <p class="note">Retrofit & Repair</p>
+      </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <section class="wrap">
-    <h2>Reliable. Code-Compliant. Professional.</h2>
-    <p class="muted">
-      We provide dependable electrical solutions for commercial and residential clients throughout South Florida.
-      From service upgrades and lighting retrofits to generators and EV chargers, our team delivers safe, clean,
-      and efficient work with clear communication.
-    </p>
+<section class="band">
+  <div class="wrap">
+    <h2>Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Commercial Electrical</h3>
+        <ul>
+          <li>Electrical service & meter upgrades</li>
+          <li>Commercial & parking lot lighting</li>
+          <li>Panel replacements & breaker upgrades</li>
+          <li>Generators & transfer switches</li>
+          <li>EV charging stations</li>
+          <li>Troubleshooting & repairs</li>
+          <li>Code compliance corrections</li>
+          <li>Occupied facility electrical work</li>
+        </ul>
+      </div>
 
-    <div class="grid" style="margin-top:18px;">
       <div class="card">
-        <h3>Commercial</h3>
-        <p class="muted">Upgrades, troubleshooting, lighting, generators, EV charging, and compliance work.</p>
-      </div>
-      <div class="card">
-        <h3>Residential</h3>
-        <p class="muted">Panels, lighting, repairs, EV chargers, generators, and code corrections.</p>
-      </div>
-      <div class="card">
-        <h3>Safety & Compliance</h3>
-        <p class="muted">We prioritize safety, inspections, and code-compliant installations.</p>
+        <h3>Residential Electrical</h3>
+        <ul>
+          <li>Panel and service upgrades</li>
+          <li>Interior & exterior lighting</li>
+          <li>EV charger installations</li>
+          <li>Generator installations</li>
+          <li>Electrical repairs & troubleshooting</li>
+          <li>Code compliance upgrades</li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="band">
-    <div class="wrap">
-      <h2>Services</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Commercial Electrical</h3>
-          <ul>
-            <li>Electrical service & meter upgrades</li>
-            <li>Commercial & parking lot lighting</li>
-            <li>Panel replacements & breaker upgrades</li>
-            <li>Generators & transfer switches</li>
-            <li>EV charging stations</li>
-            <li>Troubleshooting & repairs</li>
-            <li>Code compliance corrections</li>
-            <li>Occupied facility electrical work</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>Residential Electrical</h3>
-          <ul>
-            <li>Panel and service upgrades</li>
-            <li>Interior & exterior lighting</li>
-            <li>EV charger installations</li>
-            <li>Generator installations</li>
-            <li>Electrical repairs & troubleshooting</li>
-            <li>Code compliance upgrades</li>
-          </ul>
-        </div>
-      </div>
-
-      <p class="note" style="margin-top:14px;">
-        Need something not listed? Contact us—chances are we do it.
+<section class="wrap" id="contact">
+  <h2>Contact</h2>
+  <div class="grid">
+    <div class="contact">
+      <p><strong>J&J Electrical Contractors, LLC</strong></p>
+      <p>📍 Serving South Florida & Broward</p>
+      <p>📞 On Call – Emergencies: <strong>305-710-2623</strong></p>
+      <p>📞 Office: <strong>305-710-2299</strong></p>
+      <p>📧 Email:
+        <a href="mailto:jjelectricalcontractor@gmail.com">
+          <strong>jjelectricalcontractor@gmail.com</strong>
+        </a>
       </p>
     </div>
-  </section>
 
-  <section class="wrap">
-    <h2>Project Experience</h2>
-    <p class="muted">
-      Our experience includes municipal, institutional, commercial, and residential work.
-      We understand the importance of scheduling, inspections, and coordination with utilities and other trades.
-    </p>
-    <ul>
-      <li>City of Miami electrical compliance projects</li>
-      <li>FIU medical and institutional facilities</li>
-      <li>Large-scale lighting retrofits</li>
-      <li>Electrical service and meter replacements</li>
-      <li>Multifamily and residential properties</li>
-    </ul>
-  </section>
+    <div class="card">
+      <h3>Request an Estimate</h3>
+      <p class="note">Commercial & Residential Electrical Projects</p>
 
-  <section class="band" id="contact">
-    <div class="wrap">
-      <h2>Contact</h2>
-      <div class="grid">
-        <div class="contact">
-          <p><strong>J&J Electrical Contractors, LLC</strong></p>
-          <p>📍 Serving South Florida & Broward </p>
-          <p>📞 On Call - Emergencies: <strong>(305-710-2623)</strong></p>
-          <p>📞 Office: <strong>(305-710-2299)</strong></p>
-          <p>📧 Email: <a href="mailto:jjelectricalcontractor@gmail.com"><strong>jjelectricalcontractor@gmail.com</strong></a>
-          <p class="note"></p>
+      <form action="https://formspree.io/f/xojjzkwy" method="POST">
+        <div class="field">
+          <label>Name</label>
+          <input type="text" name="name" required>
         </div>
 
-        <div class="card">
-        <h3>Request an Estimate</h3>
-<p class="note">Commercial & Residential Electrical Projects</p>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
 
-<form action="https://formspree.io/f/xojjzkwy" method="POST">
-  <div class="field">
-    <label>Name</label>
-    <input type="text" name="name" required>
+        <div class="field">
+          <label>Phone</label>
+          <input type="tel" name="phone">
+        </div>
+
+        <div class="field">
+          <label>Message</label>
+          <textarea name="message" rows="4" required></textarea>
+        </div>
+
+        <button type="submit">Send Request</button>
+      </form>
+    </div>
   </div>
+</section>
 
-  <div class="field">
-    <label>Email</label>
-    <input type="email" name="email" required>
-  </div>
+<footer>
+  © 2026 J&J Electrical Contractors, LLC | License EC13009787 | Licensed & Insured
+</footer>
 
-  <div class="field">
-    <label>Phone</label>
-    <input type="tel" name="phone">
-  </div>
+</body>
+</html>
 
-  <div class="field">
-    <label>Message</label>
-    <textarea name="message" rows="4" required></textarea>
-  </div>
-
-  <button type="submit">Send Request</button>
-</form>
