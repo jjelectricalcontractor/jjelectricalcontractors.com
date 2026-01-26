@@ -1,34 +1,59 @@
-<script src="assets/vendor/php-email-form/validate.js"></script>
+<form action="https://formspree.io/f/xojjzkwy" method="POST" class="php-email-form">
 
-  <!-- Email subject -->
+  <!-- Formspree settings -->
   <input type="hidden" name="_subject" value="New Quote Request – J&J Electrical Contractors, LLC">
-
-  <!-- Redirect after submit -->
   <input type="hidden" name="_next" value="https://jjelectricalcontractors.com/thank-you.html">
 
-  <div class="form-grid">
-    <div class="form-field">
-      <label for="fullname">Full Name</label>
-      <input type="text" name="name" id="fullname" placeholder="Enter your full name" required>
+  <div class="row gy-4">
+
+    <!-- Full Name -->
+    <div class="col-md-6">
+      <label for="fullname" class="form-label">Full Name</label>
+      <input
+        type="text"
+        name="name"
+        id="fullname"
+        class="form-control"
+        placeholder="Enter your full name"
+        required>
     </div>
 
-    <div class="form-field">
-      <label for="email">Email Address</label>
-      <input type="email" name="email" id="email" placeholder="your.email@example.com" required>
+    <!-- Email -->
+    <div class="col-md-6">
+      <label for="email" class="form-label">Email Address</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="form-control"
+        placeholder="your.email@example.com"
+        required>
     </div>
 
-    <div class="form-field">
-      <label for="phone">Phone Number</label>
-      <input type="tel" name="phone" id="phone" placeholder="+1 (305) 000-0000" required>
+    <!-- Phone -->
+    <div class="col-md-6">
+      <label for="phone" class="form-label">Phone Number</label>
+      <input
+        type="tel"
+        name="phone"
+        id="phone"
+        class="form-control"
+        placeholder="+1 (305) 000-0000"
+        required>
     </div>
 
-    <div class="form-field">
-      <label for="project-type">Project Category</label>
-      <select name="type" id="project-type" required>
+    <!-- Project Category -->
+    <div class="col-md-6">
+      <label for="project-type" class="form-label">Project Category</label>
+      <select
+        name="type"
+        id="project-type"
+        class="form-select"
+        required>
         <option value="">Choose project type</option>
         <option value="service-call">Service Call / Troubleshooting</option>
         <option value="panel-upgrade">Panel Upgrade</option>
-        <option value="lighting">Lighting (Interior/Exterior)</option>
+        <option value="lighting">Lighting (Interior / Exterior)</option>
         <option value="commercial">Commercial Electrical</option>
         <option value="generator">Generator / Transfer Switch</option>
         <option value="remodel">Remodel / New Construction</option>
@@ -36,9 +61,14 @@
       </select>
     </div>
 
-    <div class="form-field">
-      <label for="timeline">Expected Timeline</label>
-      <select name="timeline" id="timeline" required>
+    <!-- Timeline -->
+    <div class="col-md-6">
+      <label for="timeline" class="form-label">Expected Timeline</label>
+      <select
+        name="timeline"
+        id="timeline"
+        class="form-select"
+        required>
         <option value="">Select timeline</option>
         <option value="immediate">ASAP</option>
         <option value="2-4weeks">2–4 Weeks</option>
@@ -47,22 +77,35 @@
       </select>
     </div>
 
-    <div class="form-field">
-      <label for="budget">Estimated Budget</label>
-      <input type="text" name="budget" id="budget" placeholder="Budget range (optional)">
+    <!-- Budget -->
+    <div class="col-md-6">
+      <label for="budget" class="form-label">Estimated Budget</label>
+      <input
+        type="text"
+        name="budget"
+        id="budget"
+        class="form-control"
+        placeholder="Budget range (optional)">
     </div>
+
+    <!-- Description -->
+    <div class="col-12">
+      <label for="description" class="form-label">Project Description</label>
+      <textarea
+        name="message"
+        id="description"
+        class="form-control"
+        rows="5"
+        placeholder="Describe your project (address/city, what you need done, and any details)..."
+        required></textarea>
+    </div>
+
+    <!-- Submit -->
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary w-100">
+        Request Detailed Quote
+      </button>
+    </div>
+
   </div>
-
-  <div class="form-field full-width">
-    <label for="description">Project Description</label>
-    <textarea name="message" id="description" rows="4"
-      placeholder="Describe your project (address/city, what you need done, and any details)..."
-      required></textarea>
-  </div>
-
-  <button type="submit" class="submit-btn">
-    <span>Request Detailed Quote</span>
-    <i class="bi bi-arrow-right"></i>
-  </button>
-
 </form>
